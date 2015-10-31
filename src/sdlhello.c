@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 	SDL_Event event;
 	atexit(SDL_Quit);
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) exit(1);
+	SDL_WM_SetIcon(SDL_LoadBMP("icon.bmp"), NULL);
 	if (SDL_SetVideoMode(300, 300, 0, SDL_OPENGL|SDL_RESIZABLE) == 0) exit(1);
 	SDL_WM_SetCaption("SDLHello","sdlhello");
 	glViewport(0, 0, 300, 300);

@@ -298,6 +298,8 @@ int main( int argc, char* argv[] )
         quit_tutorial( 1 );
     }
 
+	SDL_WM_SetIcon(SDL_LoadBMP("icon.bmp"), NULL);
+
     /* Let's get some video information. */
     info = SDL_GetVideoInfo( );
 
@@ -379,6 +381,7 @@ int main( int argc, char* argv[] )
 	printf("Error: %s\n", glewGetErrorString(err));
     setup_opengl( width, height );
 
+	SDL_WM_SetCaption("SDLOpenGL","sdlopengl");
 
     /*
      * Now we want to begin our normal app process--
